@@ -3,6 +3,11 @@
 
 using namespace std;
 
+void printK(int* k)
+{
+    cout << *k << endl;
+}
+
 int main()
 {
     // std::cut << "Hello World" << std::endl;
@@ -14,6 +19,15 @@ int main()
     // v[i] = i++;
     // cout << v[i] << " " << i << endl;
 
-    printf("My name is%s%s\n","EL", "KRAVCHUK");
+    // printf("My name is%s%s\n","EL", "KRAVCHUK");
+    // int a = 1;
+    // cout << ++a-- << endl;
+
+    // char s = '/**/';
+    // cout << s << endl;
+
+    int k = 3;
+    printK(&k);
+
 }
 
