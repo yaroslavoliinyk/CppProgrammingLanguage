@@ -26,8 +26,17 @@ int main()
     // char s = '/**/';
     // cout << s << endl;
 
-    int k = 3;
-    printK(&k);
+    // int k = 3;
+    // printK(&k);
+
+    // double* t[2];
+  
+    // *(t[0]) = 3;
+    typedef double TwoDoubleArr[2];
+    TwoDoubleArr* pda = new TwoDoubleArr[1000];
+    (*pda)[0] = 3;
+
+    cout << (*pda)[0] <<endl;
 
 }
 
