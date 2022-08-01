@@ -15,5 +15,16 @@ int main()
 
     char x = 100ul;
     cout << x << endl;
+
+    char* c1 = "Hello";
+    char c2[] = "Hello";
+    // c2 = c1;
+
+    if(c1 == c2)
+    {
+        cout << "HI\a\n!" << endl;
+    }
+    else cout << "TAK@" << endl;
+    // cout << c1 == c2 <<endl;
 }
 
