@@ -1,4 +1,6 @@
 #include <iostream>
+#include <vector>
+#include <list>
 using namespace std;
 
 struct Tnode{
@@ -7,14 +9,30 @@ struct Tnode{
     Tnode* left = 0;
     Tnode* right = 0;
 };
+list<string> words;
+
 
 // Write a function to write out a tree of Tnodes
 void printTree(const Tnode &mainNode, int level)
 {
     char* pillar = "|\n";
-    if (mainNode.left) { printTree();}
+    if (mainNode.left) { printTree(*(mainNode.left), level + 1); }
+    if (mainNode.right) { printTree(*(mainNode.right), level + 1); }
+    words.push_back(mainNode.word);
+    return;
 }
+
+typedef int CMP_F(const void*, const void*);
+
 // Write a function to write out a tree of Tnodes with the words in alphabetical order.
+void printOrderTree()
+{
+    words.sort();
+    for (string word : words)
+    {
+        std::cout << word <<endl;
+    }
+}
 
 int main()
 {
@@ -42,5 +60,8 @@ int main()
     n_l_l.count = 27;
     n_l_r.word = "Usyk";
     n_l_r.count = 39;
+
+    printTree(n, 0);
+    printOrderTree();
 
 }

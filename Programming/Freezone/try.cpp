@@ -18,4 +18,7 @@ int main()
     Tnode t2;
     cout << t2.left << endl;
     cout << t2.right << endl;
+
+    char* spaces = "  s";
+    
 }
